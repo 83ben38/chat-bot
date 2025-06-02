@@ -100,6 +100,7 @@ def chat():
         global newFile
         oldFile = newFile
         global fileName
+        fileName = datetime.datetime.now().strftime("%Y-%m-%d,%H-%M-%S")
         newFile = open("./history/"+fileName.replace("\n","")+".txt",'a')
         if (oldFile == ""):
             newFile.write(fileName+"\n")
